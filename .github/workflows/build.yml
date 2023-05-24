@@ -48,5 +48,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          chmod +x ./gradlew build --warning-mode all
-          ./gradlew build sonarqube --info
+           chmod +x ./gradlew
+           ./gradlew build sonarqube --info
