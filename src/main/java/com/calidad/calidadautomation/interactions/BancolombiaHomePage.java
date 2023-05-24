@@ -4,6 +4,8 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.actions.Enter;
+import org.openqa.selenium.Keys;
 
 //import static com.calidad.calidadautomation.userinterfaces.UsuarioPage.INPUT_TEXT;
 import java.util.Random;
@@ -21,10 +23,6 @@ public class BancolombiaHomePage implements Interaction {
                 Click.on(LINK_PAGE_CREDITO_CONSUMO)
         );
 
-    }
-    private int generateRandomNumber(int min, int max) {
-        Random random = new Random();
-        return random.nextInt(max - min + 1) + min;
     }
 
     public static BancolombiaHomePage go(){

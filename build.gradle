@@ -22,7 +22,7 @@ repositories {
 }
 
 ext {
-    serenityVersion = '1.9.9'
+    serenityVersion = '2.0.0'
     serenityCucumberVersion = '1.9.8'
     serenityVersionRest = '2.0.0'
 }

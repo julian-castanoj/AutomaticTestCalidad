@@ -7,22 +7,22 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Open;
 
-public class OpenThe implements Task {
+
+public class OpenHomePage implements Task {
     private PageObject page;
 
-    public OpenThe(PageObject page){
+    public OpenHomePage(PageObject page){
         this.page = page;
     }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-            actor.attemptsTo(Open.browserOn(page));
-            actor.attemptsTo(BancolombiaHomePage.go());
+        actor.attemptsTo(Open.browserOn(page));
+        actor.attemptsTo(BancolombiaHomePage.go());
     }
 
-    public static OpenThe Browser(PageObject page){
-        return Tasks.instrumented(OpenThe.class,page);
+    public static OpenHomePage Browser(PageObject page){
+        return Tasks.instrumented(OpenHomePage.class,page);
     }
-
 
 }
