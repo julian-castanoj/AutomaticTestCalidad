@@ -40,11 +40,6 @@ jobs:
       - name: Build with Gradle
         run: xvfb-run -a ./gradlew test build --info
 
-      - name: Set up Java 19.0
-        run: |
-          export JAVA_HOME=/path/to/java19.0
-          export PATH=$JAVA_HOME/bin:$PATH
-
       - name: Cache SonarCloud packages
         uses: actions/cache@v3
         with:
