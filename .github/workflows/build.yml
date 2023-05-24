@@ -15,14 +15,30 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+      - name: Run chmod to make gradlew executable
+        run: chmod +x ./gradlew
 
       - name: Set up JDK 8
         uses: actions/setup-java@v3
         with:
           java-version: 8
           distribution: 'zulu'
+      - name: Setup Chrome
+        uses: browser-actions/setup-chrome@v1.2.0
+      - name: Install Chromedriver
+        run: |
+            LATEST_CHROMEDRIVER_VERSION=$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE)
+            wget https://chromedriver.storage.googleapis.com/$LATEST_CHROMEDRIVER_VERSION/chromedriver_linux64.zip
+            unzip chromedriver_linux64.zip
+            sudo mv chromedriver /usr/local/bin/chromedriver
+            sudo chmod +x /usr/local/bin/chromedriver
+      - name: Set up Xvfb
+        run: |
+          export DISPLAY=:99
+          Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+          sleep 3
+      - name: Build with Gradle
+        run: xvfb-run -a ./gradlew test build --info
 
       - name: Set up Java 19.0
         run: |
