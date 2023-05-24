@@ -4,11 +4,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.Enter;
-import org.openqa.selenium.Keys;
 
-//import static com.calidad.calidadautomation.userinterfaces.UsuarioPage.INPUT_TEXT;
-import java.util.Random;
 
 import static com.calidad.calidadautomation.userinterfaces.UsuarioPage.*;
 

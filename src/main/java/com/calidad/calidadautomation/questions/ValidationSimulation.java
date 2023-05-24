@@ -6,19 +6,15 @@ import net.serenitybdd.screenplay.questions.Text;
 
 import static com.calidad.calidadautomation.userinterfaces.UsuarioPage.TEXT_VALIDATION_SIMULATION;
 
-public class ValidationSimulation implements Question {
+public class ValidationSimulation implements Question<Boolean> {
 
 
     @Override
-    public Object answeredBy(Actor actor) {
+    public Boolean answeredBy(Actor actor) {
 
         String stringTemporal = Text.of(TEXT_VALIDATION_SIMULATION).viewedBy(actor).asString();
-        if(stringTemporal.contains("Te ofrecemos estas opciones para Crédito de Libre Inversión")){
-            return true;
-        }else {
-            return false;
-        }
-    }
+        return stringTemporal.contains("Te ofrecemos estas opciones para Crédito de Libre Inversión");
 
+    }
     public static ValidationSimulation theSimulationOk(){return new ValidationSimulation();}
 }
