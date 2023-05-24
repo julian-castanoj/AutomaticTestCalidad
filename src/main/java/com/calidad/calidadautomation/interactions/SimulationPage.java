@@ -9,7 +9,6 @@ import net.serenitybdd.screenplay.actions.Enter;
 import java.util.Random;
 
 import static com.calidad.calidadautomation.userinterfaces.UsuarioPage.*;
-import static com.calidad.calidadautomation.userinterfaces.UsuarioPage.BUTTON_SIMULAR;
 
 public class SimulationPage implements Interaction {
 
@@ -18,25 +17,17 @@ public class SimulationPage implements Interaction {
 
         int randomNumber = generateRandomNumber(1000000, 500000000);
         int randomNumberMonths = generateRandomNumber(48, 84);
-
         String randomNumberString = String.valueOf(randomNumber);
         String randomNumberMonthString = String.valueOf(randomNumberMonths);
 
         actor.attemptsTo(
-                Click.on(LINK_PAGE_SIMULAR_CREDITO),
-                Click.on(BUTTON_CONTINUAR),
-                Click.on(SELECTION_SI),
+                Enter.theValue(randomNumberString).into(INPUT_NUMBER_RANDOM),
+                Enter.theValue(randomNumberMonthString).into(INPUT_NUMBER_RANDOM_MONTH),
                 Click.on(SELECT_DATE),
                 Click.on(SELECT_YEAR),
                 Click.on(SELECT_MONTH),
-                Click.on(SELECT_DAY),
-                Enter.theValue(randomNumberString).into(INPUT_NUMBER_RANDOM),
-                Enter.theValue(randomNumberMonthString).into(INPUT_NUMBER_RANDOM_MONTH),
-                Click.on(BUTTON_SIMULAR)
+                Click.on(SELECT_DAY)
         );
-
-
-
     }
     private int generateRandomNumber(int min, int max) {
         Random random = new Random();

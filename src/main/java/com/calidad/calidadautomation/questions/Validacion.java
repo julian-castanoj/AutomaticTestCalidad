@@ -12,7 +12,7 @@ public class Validacion implements Question {
     @Override
     public Object answeredBy(Actor actor) {
         String stringTemporal = Text.of(TEXT_VALIDATION_BANCOLOMBIA).viewedBy(actor).asString();
-        if(stringTemporal.contains("Copyright © 2023 Grupo Bancolombia")){
+        if(stringTemporal.contains("Te ofrecemos estas opciones para Crédito de Libre Inversión")){
             return true;
         }else {
             return false;

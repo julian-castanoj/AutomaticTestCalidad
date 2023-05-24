@@ -2,12 +2,8 @@ package com.calidad.calidadautomation.userinterfaces;
 
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.screenplay.targets.Target;
-import net.serenitybdd.core.annotations.findby.By;
 
 public class UsuarioPage extends PageObject {
-    //public static final Target INPUT_TEXT = Target.the("INPUT TEXT").locatedBy("//*[@id='APjFqb']");
-    //public static final Target LINK_HOMEPAGE_BANCOLOMBIA_PERSONAS = Target.the("LINK BANCOLOMBIA").locatedBy("//*[@id=\"home-conoce-mas-productos\"]/div/div[2]/div[1]/div/div[2]/span/a");
-
     public static final Target CLOSE_ADS = Target.the("CLOSE ADS").locatedBy("//*[@id=\"closeModalBtn\"]/span");
     public static final Target LINK_PAGE_CREDITO_CONSUMO = Target.the("LINK PAGE CREDITO CONSUMO").locatedBy("//*[@id=\"home-conoce-mas-productos\"]/div/div[2]/div[1]/div/div[2]/span/a");
     public static final Target LINK_PAGE_SIMULAR_CREDITO = Target.the("LINK PAGE SIMULAR CREDITO").locatedBy("//*[@id=\"creditos\"]/div/div[1]/div[4]/div/div[2]/div/a[1]");
@@ -25,6 +21,6 @@ public class UsuarioPage extends PageObject {
 
 
 
-    public static final Target TEXT_VALIDATION_BANCOLOMBIA = Target.the("TEXTO EN LA HOMEPAGE").locatedBy("//*[@id=\"footer\"]/div[2]/div/div/div/p");
+    public static final Target TEXT_VALIDATION_BANCOLOMBIA = Target.the("TEXTO EN LA HOMEPAGE").locatedBy("//*[@id=\"layoutContainers\"]/div/div[2]/div/div[2]/section/div[3]/div[2]/app-root/div/app-resultado-simulacion/section[1]/span");
 
 }
