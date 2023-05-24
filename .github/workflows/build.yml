@@ -65,4 +65,4 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
            chmod +x ./gradlew
-           ./gradlew build sonarqube --info --warning-mode all
+           ./gradlew build sonarqube --info 
