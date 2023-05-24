@@ -34,7 +34,7 @@ repositories {
 ext {
     serenityVersion = '1.9.9'
     serenityCucumberVersion = '1.9.8'
-    serenityVersionR = '2.0.0'
+    serenityVersionRest = '2.0.0'
 }
 
 dependencies {
@@ -44,7 +44,7 @@ dependencies {
     implementation "net.serenity-bdd:serenity-screenplay:$rootProject.ext.serenityVersion"
     implementation "net.serenity-bdd:serenity-screenplay-webdriver:$rootProject.ext.serenityVersion"
     implementation "net.serenity-bdd:serenity-cucumber:$rootProject.ext.serenityCucumberVersion"
-    implementation "net.serenity-bdd:serenity-screenplay-rest:$rootProject.ext.serenityVersionR"
+    implementation "net.serenity-bdd:serenity-screenplay-rest:$rootProject.ext.serenityVersionRest"
     testImplementation 'junit:junit:4.12'
     testImplementation 'org.assertj:assertj-core:3.9.1'
     testImplementation 'org.slf4j:slf4j-simple:1.7.21'

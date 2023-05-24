@@ -1,6 +1,7 @@
 package co.edu.udea.certificacion.calidad.stepdefinitions;
 
 import com.calidad.calidadautomation.questions.Validacion;
+import com.calidad.calidadautomation.tasks.NavigateCreditsPage;
 import com.calidad.calidadautomation.tasks.OpenThe;
 import com.calidad.calidadautomation.userinterfaces.UsuarioPage;
 import cucumber.api.java.Before;
@@ -48,6 +49,7 @@ public class FindHomePageStepDefinitions {
 
     @Given("me encuentro en la pagina de Bancolombia Personas")
     public void meEncuentroPaginaBancolombia(){
+        usuario.can(BrowseTheWeb.with(driver));
     }
 
     @When("le doy click a Saber mas de la seccion de financia lo que sueñas, quieres y necesitas")
@@ -63,25 +65,38 @@ public class FindHomePageStepDefinitions {
 
 
     //Escenario 2
-
+    @Given("Me encuentro en la pagina de Creditos Comsumo")
+    public void meEncuentroPaginaCreditosConsumo(){
+        usuario.can(BrowseTheWeb.with(driver));
+    }
     @When("le doy click en Simular de la seccion de libre inversion Bancolombia")
     public void  clickSimularLibreInversion(){
-        usuario.attemptsTo(OpenThe.Browser(new UsuarioPage()));
+        usuario.attemptsTo(NavigateCreditsPage.onPage());
     }
 
     @And("le doy click en Continuar")
     public void clickContinuar(){
-        usuario.attemptsTo(OpenThe.Browser(new UsuarioPage()));
+        usuario.attemptsTo(NavigateCreditsPage.onPage());
     }
 
-    @And("selecciono la opcion sí")
+    /*@And("selecciono la opcion si")
     public void seleccionoSí(){
         usuario.attemptsTo(OpenThe.Browser(new UsuarioPage()));
     }
 
+    @And("ingreso los datos que necesito para la simulacion")
+    public void ingresaDatosSimulacion(){
+        usuario.attemptsTo(OpenThe.Browser(new UsuarioPage()));
+    }
 
+    @And("le doy click en Simular")
+    public void clickSimular(){
+        usuario.attemptsTo(OpenThe.Browser(new UsuarioPage()));
+    }
 
+    @Then("puedo ver en la pagina mi simulacion del credito")
+    public void puedoVerSimulacion(){
+        usuario.attemptsTo(OpenThe.Browser(new UsuarioPage()));
+    }*/
 
-
-    
 }

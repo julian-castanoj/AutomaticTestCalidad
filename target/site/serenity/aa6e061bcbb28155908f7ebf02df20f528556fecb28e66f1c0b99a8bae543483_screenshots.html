@@ -129,7 +129,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 22-05-2023 23:28</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 23-05-2023 21:10</span>
     <br style="clear:left"/>
 </div>
 
@@ -168,9 +168,9 @@ Para poder elegir la más adecuada
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><i class='far fa-stop-circle pending-icon fa-2x' title='PENDING'></i></span>
+                            <span class="outcome-icon"><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></span>
                             <span class="test-case-title">
-                                <span class="pending-color">Buscar la seccion de credito de libre inversion Bancolombia
+                                <span class="failing-color">Buscar la seccion de credito de libre inversion Bancolombia
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -187,9 +187,57 @@ Para poder elegir la más adecuada
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Element should be enabled exception: Expected enabled element was not enabled</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.calidad.calidadautomation.interactions.CreditsPage.performAs(CreditsPage.java:24)<br />com.calidad.calidadautomation.tasks.NavigateCreditsPage.performAs(NavigateCreditsPage.java:12)<br />co.edu.udea.certificacion.calidad.stepdefinitions.FindHomePageStepDefinitions.clickSimularLibreInversion(FindHomePageStepDefinitions.java:74)<br />cucumber.runner.Runner.runPickle(Runner.java:80)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
+                    </div>
+
+                    <h4>
+                        Caused by: org.openqa.selenium.TimeoutException
+                    </h4>
+                    <div>
+                            <pre>Expected condition failed: waiting for By.xpath: //*[@id=&quot;creditos&quot;]/div/div[1]/div[4]/div/div[2]/div/a[1] to be enabled (tried for 5 second(s) with 100 milliseconds interval)</pre>
+                        <pre>com.calidad.calidadautomation.interactions.CreditsPage.performAs(CreditsPage.java :24)<br />com.calidad.calidadautomation.tasks.NavigateCreditsPage.performAs(NavigateCreditsPage.java :12)<br />co.edu.udea.certificacion.calidad.stepdefinitions.FindHomePageStepDefinitions.clickSimularLibreInversion(FindHomePageStepDefinitions.java :74)<br />cucumber.runner.Runner.runPickle(Runner.java :80)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java :69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java :74)<br /></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource7297701288993421186.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="0385f49b2b920b91234f8170abfc62d71fb75afd6350e70f0d6929ed0ea9eb08.png" title="Given Me encuentro en la pagina de Creditos Comsumo: <span class='pending-color'>PENDING</span>" width="1600"/>
+                <img src="0385f49b2b920b91234f8170abfc62d71fb75afd6350e70f0d6929ed0ea9eb08.png" title="Given Me encuentro en la pagina de Creditos Comsumo" width="1600"/>
+                <img src="0385f49b2b920b91234f8170abfc62d71fb75afd6350e70f0d6929ed0ea9eb08.png" title="When le doy click en Simular de la seccion de libre inversion Bancolombia" width="1600"/>
+                <img src="0385f49b2b920b91234f8170abfc62d71fb75afd6350e70f0d6929ed0ea9eb08.png" title="Carlitos clicks on LINK PAGE SIMULAR CREDITO: <span class='failing-color'>FAILURE</span>" width="1600"/>
             </div>
         </div>
 

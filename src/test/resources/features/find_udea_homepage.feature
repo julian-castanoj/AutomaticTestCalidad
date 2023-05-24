@@ -20,4 +20,8 @@
       Given Me encuentro en la pagina de Creditos Comsumo
       When le doy click en Simular de la seccion de libre inversion Bancolombia
       And le doy click en Continuar
-      And selecciono la opcion sí
+      And selecciono la opcion si
+      And ingreso los datos que necesito para la simulacion
+      And le doy click en Simular
+      Then puedo ver en la pagina mi simulacion del credito
+
