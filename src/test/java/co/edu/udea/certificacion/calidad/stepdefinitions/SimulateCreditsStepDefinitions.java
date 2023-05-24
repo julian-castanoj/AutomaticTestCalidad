@@ -32,7 +32,6 @@ public class SimulateCreditsStepDefinitions {
         usuario.can(BrowseTheWeb.with(driver));*/
     }
 
-
     @Given("me encuentro en la pagina de Bancolombia Personas")
     public void meEncuentroPaginaBancolombia(){
         driver.manage().window().maximize();
