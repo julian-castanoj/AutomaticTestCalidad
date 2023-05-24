@@ -40,7 +40,7 @@ jobs:
       - name: Run automated test
         run: |
           chmod +x ./gradlew
-          ./gradlew build -x testca
+          ./gradlew build -x test
 
       - name: Build and analyze with SonarCloud
         env:
