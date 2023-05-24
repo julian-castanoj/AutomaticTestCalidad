@@ -19,7 +19,7 @@ import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static org.hamcrest.core.IsEqual.equalTo;
 
 @RunWith(Cucumber.class)
-public class FindHomePageStepDefinitions {
+public class SimulateCreditsStepDefinitions {
 
     @Managed(driver = "chrome")
     public WebDriver driver;
@@ -65,7 +65,7 @@ public class FindHomePageStepDefinitions {
 
     @And("le doy click en Simular")
     public void clickSimular(){
-        user.attemptsTo(SimulateBut.onPage(new UsuarioPage()));
+        user.attemptsTo(SimulationGenerate.onPage(new UsuarioPage()));
     }
 
     @Then("puedo ver en la pagina mi simulacion del credito")

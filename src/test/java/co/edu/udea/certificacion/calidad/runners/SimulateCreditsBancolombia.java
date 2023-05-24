@@ -7,10 +7,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/features/find_udea_homepage.feature",
+        features = "src/test/resources/features/simulate_credits_bancolombia.feature",
         glue = "co.edu.udea.certificacion.calidad.stepdefinitions",
         snippets = SnippetType.CAMELCASE
 )
-public class FindHomePageUdeA {
+public class SimulateCreditsBancolombia {
 
 }

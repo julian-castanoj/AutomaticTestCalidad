@@ -7,7 +7,7 @@ import net.serenitybdd.screenplay.actions.Click;
 
 import static com.calidad.calidadautomation.userinterfaces.UsuarioPage.*;
 
-public class SimulateButSection implements Interaction {
+public class SimulateGenerateSection implements Interaction {
     @Override
     public <T extends Actor> void performAs(T actor) {
 
@@ -16,7 +16,7 @@ public class SimulateButSection implements Interaction {
         );
     }
 
-    public static SimulateButSection go(){
-        return Tasks.instrumented(SimulateButSection.class);
+    public static SimulateGenerateSection go(){
+        return Tasks.instrumented(SimulateGenerateSection.class);
     }
 }
