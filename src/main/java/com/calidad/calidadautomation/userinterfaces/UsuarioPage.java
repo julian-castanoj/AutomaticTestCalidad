@@ -18,9 +18,8 @@ public class UsuarioPage extends PageObject {
     public static final Target SELECT_DAY = Target.the("INPUT NUMBER RANDOM MONTH").locatedBy("//*[@id=\"mat-datepicker-0\"]/div/mat-month-view/table/tbody/tr[3]/td[2]/div[1]");
     public static final Target BUTTON_SIMULAR = Target.the("BUTTON SIMULAR").locatedBy("//*[@id=\"boton-simular\"]");
 
+    public static final Target TEXT_VALIDATION_SIMULATION = Target.the("TEXTO EN LA HOMEPAGE").locatedBy("//*[@id=\"layoutContainers\"]/div/div[2]/div/div[2]/section/div[3]/div[2]/app-root/div/app-resultado-simulacion/section[1]/span");
+    public static final Target TEXT_VALIDATION_BANCOLOMBIA = Target.the("TEXTO EN LA HOMEPAGE").locatedBy("//*[@id=\"footer\"]/div[2]/div/div/div/p");
 
-
-
-    public static final Target TEXT_VALIDATION_BANCOLOMBIA = Target.the("TEXTO EN LA HOMEPAGE").locatedBy("//*[@id=\"layoutContainers\"]/div/div[2]/div/div[2]/section/div[3]/div[2]/app-root/div/app-resultado-simulacion/section[1]/span");
 
 }
