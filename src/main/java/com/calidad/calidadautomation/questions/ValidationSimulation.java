@@ -11,6 +11,7 @@ public class ValidationSimulation implements Question {
 
     @Override
     public Object answeredBy(Actor actor) {
+
         String stringTemporal = Text.of(TEXT_VALIDATION_SIMULATION).viewedBy(actor).asString();
         if(stringTemporal.contains("Te ofrecemos estas opciones para Crédito de Libre Inversión")){
             return true;

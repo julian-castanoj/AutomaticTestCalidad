@@ -9,6 +9,7 @@ import static com.calidad.calidadautomation.userinterfaces.UsuarioPage.TEXT_VALI
 public class ValidationPageBancolombia implements Question {
     @Override
     public Object answeredBy(Actor actor) {
+
         String stringTemporal = Text.of(TEXT_VALIDATION_BANCOLOMBIA).viewedBy(actor).asString();
         if(stringTemporal.contains("Copyright © 2023 Grupo Bancolombia")){
             return true;
