@@ -9,17 +9,14 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import cucumber.api.junit.Cucumber;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.thucydides.core.annotations.Managed;
-import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static org.hamcrest.core.IsEqual.equalTo;
 
-@RunWith(Cucumber.class)
 public class SimulateCreditsStepDefinitions {
 
     @Managed(driver = "chrome")

@@ -1,5 +1,5 @@
-#Autor:Anderson
-  #languege:en
+#Autor:Juan Diego Quintero
+  #language:en
 
   Feature: Simulación de Préstamo de Libre Inversión
     Como usuario interesado en solicitar un crédito de libre inversión

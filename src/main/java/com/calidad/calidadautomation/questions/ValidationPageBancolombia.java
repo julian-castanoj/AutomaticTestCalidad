@@ -6,15 +6,12 @@ import net.serenitybdd.screenplay.questions.Text;
 
 import static com.calidad.calidadautomation.userinterfaces.UsuarioPage.TEXT_VALIDATION_BANCOLOMBIA;
 
-public class ValidationPageBancolombia implements Question {
+public class ValidationPageBancolombia implements Question<Boolean> {
     @Override
-    public Object answeredBy(Actor actor) {
+    public Boolean answeredBy(Actor actor) {
+
         String stringTemporal = Text.of(TEXT_VALIDATION_BANCOLOMBIA).viewedBy(actor).asString();
-        if(stringTemporal.contains("Copyright © 2023 Grupo Bancolombia")){
-            return true;
-        }else {
-            return false;
-        }
+        return stringTemporal.contains("Copyright © 2023 Grupo Bancolombia");
     }
 
     public static ValidationPageBancolombia theHomePage(){return new ValidationPageBancolombia();}
